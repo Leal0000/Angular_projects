@@ -1,0 +1,20 @@
+--Crear una app con angular
+
+    Ng new miprimeraapp
+    
+--Arrancar el servidor Web
+
+    ng serve --open
+
+--Crear un componente--
+
+    ng g c empleado
+
+--Ëventos en angular
+
+http://www.w3bai.com/es/angular/angular_events.html
+
+--Instalacion de librerias 
+
+npm i bootstrap jquery popper.js --save 
+

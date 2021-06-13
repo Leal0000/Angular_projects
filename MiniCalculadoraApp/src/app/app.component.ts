@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Mini Calculadora';
+  numero1:number=0;
+  numrero2:number=0;
+  resultado:number=0;
+  sumar():void{
+    this.resultado= this.numero1+this.numrero2;
+  }
+  restar():void{
+    this.resultado= this.numero1-this.numrero2;
+  }
+}

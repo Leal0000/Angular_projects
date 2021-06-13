@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">{{titulo}}</h1>
+
+  <form action="">
+
+    Nombre:<input type="text" value="" name="nombre" [(ngModel)]="nombre"><br>
+    Apellido:<input type="text" value="" name="apellido" [(ngModel)]="apellido"><br>
+    Cargo:<input type="text" value="" name="cargo" [(ngModel)]="cargo"><br>
+    <input type="submit" name="" id="" value="enviar" (click)="registrar()">
+  </form>
+  <br>
+  <p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} {{apellido}} 
+
+    <!--y tiene el cargo de <span [ngStyle]="{color:cargo=='director' ? 'red':'black'}"> {{cargo}} </span></p>-->
+    y tiene el cargo de <span [ngClass]="{paraDirectores: cargo=='director'}"> {{cargo}} </span></p>
+  <ng-template #sinRegistrar>
+
+    <p>Nadie Registrado</p>
+
+
+  </ng-template>
+  <br><br>
+  <ul>
+
+
+    <li *ngFor="let pos of post"> {{pos.name}} </li>
+
+
+  </ul>
+
+
+
+
+
+</body>
+</html>

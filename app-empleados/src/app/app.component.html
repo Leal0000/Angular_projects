@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="col">
+      <h1>{{titulo}}</h1>
+      <br><br>
+      <form action="" class="form-group row" style="text-align: center;">
+        <div class="form-group col-md-3">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="cuadronombre">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="nombre">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)]="cuadroapellido">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="nombre">Cargo:</label>
+          <input type="text" name="cargo" id="cargo" placeholder="Cargo" class="form-control" [(ngModel)]="cuadrocargo">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="nombre">Salario:</label>
+          <input type="number" name="salario" id="salario" placeholder="Salario" class="form-control" [(ngModel)]="cuadrosalario">
+        </div>   
+
+        <div class="col">
+          <button type="submit" class="btn btn-success" (click)="agregarempleado()" style="margin-top: 35px;">Agregar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col">
+        <div *ngFor="let empleado of empleados; let i=index">
+        {{i+1}}:    {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
