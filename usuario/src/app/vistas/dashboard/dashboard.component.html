@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <h1 >Users</h1>
+
+     <br>
+    <button type="button" class="btn btn-success" (click)="agregarUsuario()">New Users</button>
+    <button style="margin-left: 900px;" type="button" class="btn btn-success" (click)="Logout()">Logout</button> <br> <br>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">User</th>
+        <th scope="col">password</th>
+        <th scope="col">id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios;let i=index" (click)="editarUsuario(user.id)">
+        <th scope="row">{{i+1}}</th>
+        <td>{{user.user}}</td>
+        <td >{{user.password}}</td>
+        <td>{{user.id}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

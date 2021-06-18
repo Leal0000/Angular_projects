@@ -1,0 +1,37 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="assets/logo.jpg" id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="nuevoFor" (ngSubmit)="onLogin(nuevoFor.value)" method="POST">
+          <div>
+              <Span><h2 style="color: black;">Create an Account</h2></Span><br><br>
+          </div>
+        <input type="text" id="user" name="user" class="fadeIn second" placeholder="login" formControlName="user">
+        <input type="text" id="password" name="password" class="fadeIn third"  placeholder="password" formControlName="password">
+        <input type="submit" class="fadeIn fourth" value="Create">
+        <div>
+          <span>You Already have Account?</span>
+          <br>
+        </div>
+        
+        
+        <input type="button" class="fadeIn fourth btn btn-sucess" value="Sing In" (click)="crear()">
+  
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div class="alert alert-danger" *ngIf="errorStatus">
+        <p> {{errorMsj}} </p>
+      </div>
+  
+    </div>
+  </div>

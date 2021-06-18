@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        Parametros
+
+        <form action="" [formGroup]="editarFor" (ngSubmit)="postForm(editarFor.value)">
+            <label for="exampleFormControlInput1">ID:</label>
+            <input type="hidden" class="form-control" placeholder="Usuario" name="" id="" formControlName="id">
+            <label for="exampleFormControlInput1">Nombre:</label>
+            <input type="text" class="form-control" placeholder="Usuario" name="" id="" formControlName="user">
+            <label for="exampleFormControlInput1">Password:</label>
+            <input type="text" class="form-control" placeholder="Password" name="" id="" formControlName="password">
+            <br><br><button type="submit" class="btn btn-success" >Editar</button> 
+            <br><br><button type="button" class="btn btn-danger" (click)="eliminar(editarFor.value)">Eliminar</button>            
+            <br><br><button type="button" class="btn btn-dark" (click)="salir()">Salir</button>            
+        </form>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>
