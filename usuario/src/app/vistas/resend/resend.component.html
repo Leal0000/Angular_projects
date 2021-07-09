@@ -1,0 +1,36 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/logo.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="resendForm" (ngSubmit)="resendCode(resendForm.value)" method="POST">
+      <div>
+        <Span><h2 style="color: black;">Resend Your code of confirmation</h2></Span><br><br>
+    </div>
+      <input type="text" id="user" name="user" class="fadeIn second" placeholder="email address" formControlName="user" value="">
+      <input type="submit" class="fadeIn fourth" value="Resend code">
+      <div>
+      
+        <br>
+      </div>
+      
+      
+      
+
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger" *ngIf="errorStatus">
+      <p> {{errorMsj}} </p>
+    </div>
+
+  </div>
+</div>

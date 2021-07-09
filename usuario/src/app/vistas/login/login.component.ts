@@ -4,6 +4,7 @@ import { ApiService } from 'src/app/servicios/api/api.service';
 import { LoginI } from 'src/app/modelos/login.interface';
 import { Router } from '@angular/router'; 
 import { ResponseI } from 'src/app/modelos/response.interface';
+import { AlertasService } from 'src/app/servicios/alertas/alertas.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
     user: new FormControl('',Validators.required),
     password: new FormControl('', Validators.required)
   })
-  constructor(private api:ApiService, private router:Router) { }
+  constructor(private api:ApiService, private router:Router, private alerta:AlertasService) { }
 
 
   errorStatus:boolean = false;
@@ -41,11 +42,13 @@ export class LoginComponent implements OnInit {
       console.log(data);
       let dataResponse:ResponseI = data;
       if(dataResponse.status == "true"){
-        localStorage.setItem("token",data.response);
+        localStorage.setItem("token",data.token);
         this.router.navigate(['dashboard']);
+        this.alerta.showsuccess(dataResponse.user, '¡Bienvenido!' )
       }else{
         this.errorStatus = true;
         this.errorMsj = dataResponse.response;
+        this.alerta.showError(dataResponse.response, '¡Error!' )
       }
     })
   }

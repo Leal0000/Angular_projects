@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NuevoUsuarioComponent } from './vistas/nuevo-usuario/nuevo-usuario.component';
+import { CodeComponent } from './vistas/code/code.component';
+import { ResendComponent } from './vistas/resend/resend.component';
 //import { LoginComponent } from './vistas/login/login.component';
 //import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 //import { NuevoComponent } from './vistas/nuevo/nuevo.component';
@@ -21,7 +23,9 @@ import { NuevoUsuarioComponent } from './vistas/nuevo-usuario/nuevo-usuario.comp
     HeaderComponent,
     FooterComponent,
     routingComponents,
-    NuevoUsuarioComponent
+    NuevoUsuarioComponent,
+    CodeComponent,
+    ResendComponent
     
     //LoginComponent,
     //DashboardComponent,

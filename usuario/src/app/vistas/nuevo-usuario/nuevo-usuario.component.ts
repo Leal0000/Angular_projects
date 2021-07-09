@@ -36,7 +36,9 @@ export class NuevoUsuarioComponent implements OnInit {
       let respuesta:ResponseI = data;
       if(respuesta.status == "true"){
         this.alerta.showsuccess(respuesta.response, 'Hecho')
-        this.router.navigate(['login'])
+        let email:any = respuesta.email;
+        let user:any = respuesta.user;
+        this.router.navigate(['code', email, user])
       }else{
         this.alerta.showError(respuesta.response,'Error')
       }

@@ -5,12 +5,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Usuariosi } from '../../modelos/usuarios.interface';
 import { Observable } from 'rxjs';
 import { UserI } from '../../modelos/usuario.interface';
+import { CodeI } from 'src/app/modelos/code.interface';
+import { ResendI } from 'src/app/modelos/resend.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
+  //url:string="https://heroku-flas.herokuapp.com/";
   url:string="http://127.0.0.1:4000/";
 
   constructor(private http:HttpClient ) {}
@@ -52,4 +55,17 @@ export class ApiService {
     let direccion = this.url + "api/register";
     return this.http.post<ResponseI>(direccion, form);
   }
+
+  confirmUser(form:CodeI):Observable<ResponseI>{
+    let direccion = this.url + "api/code";
+    return this.http.post<ResponseI>(direccion, form);
+  }
+
+  resendCode(form:ResendI): Observable<ResponseI>{
+    let direccion = this.url + "api/resend_code";
+    return this.http.post<ResponseI>(direccion, form);
+  }
+
+
+
 }
