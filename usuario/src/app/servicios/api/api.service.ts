@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { UserI } from '../../modelos/usuario.interface';
 import { CodeI } from 'src/app/modelos/code.interface';
 import { ResendI } from 'src/app/modelos/resend.interface';
+import { ResetI } from 'src/app/modelos/reset.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ import { ResendI } from 'src/app/modelos/resend.interface';
 export class ApiService {
 
   //url:string="https://heroku-flas.herokuapp.com/";
-  url:string="http://127.0.0.1:4000/";
+  url:string="https://heroku-flas.herokuapp.com/";
 
   constructor(private http:HttpClient ) {}
 
@@ -63,6 +64,16 @@ export class ApiService {
 
   resendCode(form:ResendI): Observable<ResponseI>{
     let direccion = this.url + "api/resend_code";
+    return this.http.post<ResponseI>(direccion, form);
+  }
+
+  resetPassword(form:ResendI): Observable<ResponseI>{
+    let direccion = this.url + "api/reset_password";
+    return this.http.post<ResponseI>(direccion, form);
+  }
+
+  confirmReset(form:ResetI): Observable<ResponseI>{
+    let direccion = this.url + "api/reset_confirmation";
     return this.http.post<ResponseI>(direccion, form);
   }
 

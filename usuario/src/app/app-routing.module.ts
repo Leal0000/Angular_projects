@@ -7,6 +7,8 @@ import { EditarComponent } from './vistas/editar/editar.component';
 import { NuevoUsuarioComponent } from './vistas/nuevo-usuario/nuevo-usuario.component';
 import { CodeComponent } from './vistas/code/code.component';
 import { ResendComponent } from './vistas/resend/resend.component';
+import { ForgotComponent } from './vistas/forgot/forgot.component';
+import { ResetComponent } from './vistas/reset/reset.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'new', component:NuevoUsuarioComponent},
   {path : 'code/:email/:user', component:CodeComponent},
   {path : 'resend' , component:ResendComponent},
+  {path : 'forgot' , component:ForgotComponent},
+  {path : 'reset/:email/:user', component:ResetComponent},
 ];
 
 @NgModule({
@@ -24,4 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent, DashboardComponent, NuevoComponent, EditarComponent, CodeComponent, ResendComponent]
+export const routingComponents = [LoginComponent, DashboardComponent, NuevoComponent, EditarComponent, CodeComponent, ResendComponent, ForgotComponent, ResetComponent]

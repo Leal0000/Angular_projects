@@ -1,0 +1,30 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/logo.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="forgotForm" (ngSubmit)="onForgot(forgotForm.value)" method="POST">
+      <div>
+        <Span><h2 style="color: black;">Reset your password</h2>
+        <p>Write your Email address registrated in our website</p>
+        </Span><br><br>
+    </div>
+      <input type="text" id="user" name="user" class="fadeIn second" placeholder="email" formControlName="user">
+      <input type="submit" class="fadeIn fourth" value="Reset">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger" *ngIf="errorStatus">
+      <p> {{errorMsj}} </p>
+    </div>
+
+  </div>
+</div>

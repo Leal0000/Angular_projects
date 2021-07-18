@@ -31,6 +31,8 @@
     <!-- Remind Passowrd -->
     <div class="alert alert-danger" *ngIf="errorStatus">
       <p> {{errorMsj}} </p>
+      <p>Forgot Your password?</p>
+      <button class="btn btn-danger" (click)="forgot()">Click here</button>
     </div>
 
   </div>

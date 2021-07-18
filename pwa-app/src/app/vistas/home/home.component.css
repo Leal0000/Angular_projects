@@ -1,0 +1,500 @@
+/* Colors */
+
+.azuldtob {color:#147e93;
+}
+
+.azulmarino {color:#05445e;
+}
+
+.azulblanco {color:#ebfdfe;
+}
+
+.azulcyan {color:#33f1fc;
+}
+
+.azulmorado {color:#273755;
+}
+
+
+:root{ --azuldtob:#147e93}
+
+.foo {
+  color: var(--azuldtob)
+}
+
+:root{ --azulmarino:#05445e}
+
+.foo {
+  color: var(--azulmarino)
+}
+
+:root{ --azulblanco:#ebfdfe}
+
+.foo {
+  color: var(--azulblanco)
+}
+
+:root{ --azulcyan:#33f1fc}
+
+.foo {
+  color: var(--azulcyan)
+}
+
+:root{ --azulmorado:#273755}
+
+.foo {
+  color: var(--azulmorado)
+}
+
+/*------------------------------------------------------------------
+    HEADER
+-------------------------------------------------------------------*/
+
+
+.landing_image {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://s3.amazonaws.com/datatobusiness.assets/datatobsn/principal.png);
+    height: 98vh;
+    width: 100%;
+    background-image: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text{
+    position: absolute;
+    color: white;
+    margin-top: 40vh;
+    margin-left: 10vw;
+}
+h1{
+    font-size: 71px;
+    font-weight: 800;
+}
+
+.typing{
+    font-size: 40px;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+/* Cursor */
+.typed-cursor {
+
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+
+}
+nav{
+    position: absolute !important;
+}
+
+
+
+
+
+/*@media only screen and (max-width: 640px) {
+
+    .landing_image {
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(https://s3.amazonaws.com/datatobusiness.assets/imagenes/inicio.jpg);
+          height: 90vh;
+          width: 100%;
+          background-image: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+    h1{
+      font-size: 40px;
+      text-align: center;
+      margin-left: -23vw;
+    }
+
+    .typing{
+        font-size: 18px;
+        margin-left: -25vw;
+        margin-top: 10vh;
+    }
+    .navbar-dark{
+        position: fixed;
+        background-color: black;
+
+    }
+    .color{
+        font-size: 18px;
+    }
+
+    .image_center{
+    padding: 21vw;
+
+    position: relative;
+        
+    }
+
+}
+*/
+
+
+/*Fonts*/
+
+
+body {
+  font-family: 'Titillium Web', sans-serif;  
+
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h2 {
+    text-align:center;
+    color:var(--azulmorado);
+    font-size:40px;
+}
+
+h3 {
+    text-align:center;
+    color:var(--azulmorado);
+    font-size:20px;
+}
+
+span{
+    text-align:justify;
+    color:var(--azulmorado);
+    font-size:18px;
+}
+
+p{
+    text-align: center;
+    color:var(--azulmorado);
+    font-size:18px;
+}
+
+
+/*Botonwhatsapp*/
+
+.floating-wpp .floating-wpp-button svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: 2px;
+}
+
+.floating-wpp {z-index: 2;}
+
+/*Navbar*/
+
+
+.navbar-dark .navbar-nav .nav-link{
+	color: #ffffff;
+	letter-spacing: 1px;
+	font-size: 14px;
+	position: relative;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+	color: #ffffff;
+}
+.navbar-dark .navbar-nav .nav-link.active{
+	font-weight: 600;
+}
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	right: 0;
+	text-align: center;
+	margin: 0 auto;
+    border-radius: 0px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    z-index: -1;
+}
+.navbar-dark .navbar-nav .nav-link.active::after {
+	width: 50%;
+}
+
+
+
+
+/*------------------------------------------------------------------
+    SECTIONS
+-------------------------------------------------------------------*/
+
+.main-banner{
+	height: 100%;
+	position: relative;
+}
+
+.main-banner{
+	display: table;
+    width: 100%;
+	text-align: center;
+}
+.main-banner::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 0;
+    opacity: .6;
+}
+.heading{
+	color: #fff;
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+}
+.heading h1{
+	color: #182656;
+	font-weight: 700;
+	font-size: 62px;
+	text-transform: uppercase;
+}
+.heading p{
+	font-size: 18px;
+	padding: 20px 0px;
+}
+
+.heading h3{
+	color: ffffff;
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+
+/*Nosotros
+*/ 
+
+.nosotrosimage {
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.8) 100%, rgba(255, 255, 255,0.9) 50%), url(https://image.freepik.com/vector-gratis/color-ano-2021-fondo-lineas-amarillas-onduladas_23-2148790992.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: auto;
+}
+
+
+/*MisionVision*/
+
+.imgicon {
+    vertical-align: middle;
+    border-style: none;
+    height: 100px;
+}
+ 
+
+
+/*NuestrosProductos
+*/
+
+/*.container-productos{
+    height:100vh;
+}*/
+
+.productosimage {
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.8) 100%, rgba(255, 255, 255,0.9) 50%), url(https://image.freepik.com/vector-gratis/pantone-2021-fondo-ondulado-abstracto_52683-52813.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: auto;
+}
+
+.card {
+      box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+      height: 50vh;
+    }
+
+/*Nuestros procesos*/
+
+.procesosimage {
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.8) 100%, rgba(255, 255, 255,0.9) 50%), url(https://image.freepik.com/vector-gratis/color-ano-2021-fondo-lineas-amarillas-onduladas_23-2148790992.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: auto;
+}
+
+.imgiconprocesos {
+    vertical-align: middle;
+    border-style: none;
+    height: 50px;
+}
+
+
+.text-justify {
+  text-align: justify;
+}
+
+#Procesos h3 { text-align:left; }
+
+/*Servicios
+*/ 
+
+.serviciosimage {
+    background: linear-gradient(90deg, rgba(8,61,72,0.9) 100%, rgba(8,61,72,0.9) 100%), url(https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#Servicios p {color:#FFFF;
+    font-size:22px;
+}
+
+#Servicios h2 {color:#FFFF;
+}
+
+#Servicios h3 {color:#FFFF;
+}
+
+
+/*------------------------------------------------------------------
+    BUTTONS
+-------------------------------------------------------------------*/
+
+.navbar-default .btn-light {
+    padding: 0 20px;
+    margin-left: 15px;
+}
+
+.btn {
+    border: 0 !important;
+}
+
+.btn-light {
+    padding: 10px 40px;
+    font-size: 18px;
+    border: 2px solid #424fd6 !important;
+    color:#424fd6;
+    background-color: transparent;
+}
+
+.btn-dark {
+    padding: 13px 40px;
+    font-size: 18px;
+    border: 1px solid #ececec !important;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.black{
+        background-color: black !important;
+}
+
+div.row{
+margin-right:0px;
+}
+
+div.container-fluid{
+padding-right:0px;
+}
+
+
+
+/*Separadores*/
+
+.line {
+    height: 10px;
+    width: 100%;
+    background-color: var(--azulcyan);
+}
+
+/* Contacto */
+
+.container-contacto {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+/*footer */
+
+footer {
+ background-color: var(--azuldtob);
+}
+
+.spanfooter {
+    color:white;
+}
+
+.imgfooter {
+    background: linear-gradient(90deg, rgba(8,61,72,0.9) 100%, rgba(8,61,72,0.9) 100%), url(https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_960_720.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-margin-top {
+        margin-top: 20px;
+      }
+}
+
+
+.floating-wpp{position:fixed;bottom:15px;left:15px;font-size:14px;transition:bottom .2s}.floating-wpp .floating-wpp-button{position:relative;border-radius:50%;box-shadow:1px 1px 4px rgba(60,60,60,.4);transition:box-shadow .2s;cursor:pointer;overflow:hidden}.floating-wpp .floating-wpp-button img,.floating-wpp .floating-wpp-button svg{position:absolute;width:100%;height:auto;object-fit:cover;top:50%;left:50%;transform:translate3d(-50%,-50%,0);border-radius:50%}.floating-wpp:hover{bottom:17px}.floating-wpp:hover .floating-wpp-button{box-shadow:1px 2px 8px rgba(60,60,60,.4)}.floating-wpp .floating-wpp-popup{border-radius:6px;background-color:#E5DDD5;position:absolute;overflow:hidden;padding:0;box-shadow:1px 2px 8px rgba(60,60,60,.25);width:0;height:0;bottom:0;opacity:0;transition:bottom .1s ease-out,opacity .2s ease-out;transform-origin:bottom}.floating-wpp .floating-wpp-popup.active{padding:0 12px 12px;width:260px;height:auto;bottom:82px;opacity:1}.floating-wpp .floating-wpp-popup .floating-wpp-message{background-color:#fff;padding:8px;border-radius:0 5px 5px;box-shadow:1px 1px 1px rgba(0,0,0,.15);opacity:0;transition:opacity .2s}.floating-wpp .floating-wpp-popup.active .floating-wpp-message{opacity:1;transition-delay:.2s}.floating-wpp .floating-wpp-popup .floating-wpp-head{text-align:right;color:#fff;margin:0 -15px 10px;padding:6px 12px;display:flex;justify-content:space-between;cursor:pointer}.floating-wpp .floating-wpp-input-message{background-color:#fff;margin:10px -15px -15px;padding:0 15px;display:flex;align-items:center}.floating-wpp .floating-wpp-input-message textarea{border:1px solid #ccc;border-radius:4px;box-shadow:none;padding:8px;margin:10px 0;width:100%;max-width:100%;font-family:inherit;font-size:inherit;resize:none}.floating-wpp .floating-wpp-btn-send{margin-left:12px;font-size:0;cursor:pointer}
+

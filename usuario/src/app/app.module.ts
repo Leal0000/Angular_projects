@@ -12,6 +12,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { NuevoUsuarioComponent } from './vistas/nuevo-usuario/nuevo-usuario.component';
 import { CodeComponent } from './vistas/code/code.component';
 import { ResendComponent } from './vistas/resend/resend.component';
+import { ForgotComponent } from './vistas/forgot/forgot.component';
+import { ResetComponent } from './vistas/reset/reset.component';
 //import { LoginComponent } from './vistas/login/login.component';
 //import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 //import { NuevoComponent } from './vistas/nuevo/nuevo.component';
@@ -25,7 +27,9 @@ import { ResendComponent } from './vistas/resend/resend.component';
     routingComponents,
     NuevoUsuarioComponent,
     CodeComponent,
-    ResendComponent
+    ResendComponent,
+    ForgotComponent,
+    ResetComponent
     
     //LoginComponent,
     //DashboardComponent,

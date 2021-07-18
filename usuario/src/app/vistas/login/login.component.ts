@@ -57,4 +57,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['new']);
   }
 
+  forgot(){
+    this.router.navigate(['forgot']);
+  }
+
 }
