@@ -10,6 +10,7 @@ import { valorI } from '../models/valor.interface';
 import { vaI } from '../models/va.interface';
 import { IluminacionI } from '../models/iluminacion.interface';
 import { IluI } from '../models/ilum.interface';
+import { code } from '../models/code.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,11 @@ export class ApiService {
 
   createUser(form:loginI):Observable<responseI>{
     let direccion = this.url + "api/register";
+    return this.http.post<responseI>(direccion, form);
+  }
+
+  codeUser(form:code):Observable<responseI>{
+    let direccion = this.url + "api/code";
     return this.http.post<responseI>(direccion, form);
   }
   
@@ -49,6 +55,10 @@ export class ApiService {
   }
   getTemperature():Observable<TempI>{
     let direccion = this.url + "temperatura";
+    return this.http.get<TempI>(direccion);
+  }
+  getTemperatureReal():Observable<TempI>{
+    let direccion = this.url + "temperatura_real";
     return this.http.get<TempI>(direccion);
   }
   getValor(id:number):Observable<valorI>{

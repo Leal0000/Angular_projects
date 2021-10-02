@@ -31,8 +31,9 @@ export class AddComponent implements OnInit {
       console.log(data);
       let dataResponse:responseI = data;
       if(data.status == "true"){
+        let email = dataResponse.user;
         this.alerta.showSuccess(data.response, "User Created");
-        this.router.navigate(['login']);
+        this.router.navigate(['code', email]);
       }
       else{
         this.alerta.showError(data.response, "Error")

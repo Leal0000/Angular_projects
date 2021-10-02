@@ -52,10 +52,25 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getState();
-    this.getTemps();
-    this.getValor();
-    this.getIluminacion();
+    if(localStorage.getItem('token')){
+      this.getState();
+      this.getTemps();
+      this.getValor();
+      this.getIluminacion();
+    }
+    else{
+      this.router.navigate(['login'])
+    }
+    
+  }
+
+  data(){
+    this.router.navigate(['data']);
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate(['login']);
   }
 
   getState() {
