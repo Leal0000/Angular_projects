@@ -38,19 +38,19 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Devices</div>
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" style="cursor: pointer;" (click)="dashboard()">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Cuarto
                             </a>
                             <div class="sb-sidenav-menu-heading">Data</div>
-                            <a class="nav-link collapsed" href="#" (click)="data()" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#"  data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Temperatura
+                                Jardin
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" (click)="data()" style="cursor: pointer;">Temperatura</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div>
@@ -158,28 +158,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Temperatura</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <span><p>Jardin</p>
-                                            <span *ngFor="let data of data_temp">
-                                                <p>{{data.id_t}}</p>
-                                                <p>{{data.temp}}</p>
-                                                <p>{{data.humd}}</p>
-
-                                                
-
-
-                                            </span>
-                                        </span>
-                                        
-
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
                             
+                        
                            
                         </div>
 

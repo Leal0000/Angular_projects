@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertasService } from 'src/app/services/alertas.service';
 import { ApiService } from 'src/app/services/api.service';
+import { interval } from 'rxjs';
+import { takeWhile } from 'rxjs/operators'
 
 @Component({
   selector: 'app-data',
@@ -20,12 +22,19 @@ export class DataComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('token')){
-      this.getTemps();
+      const contador = interval(5000)
+      contador.pipe(takeWhile(() => !stop))
+      contador.subscribe(() => {
       this.getTempReal();
+    });
     }
     else{
       this.router.navigate(['login'])
     }
+  }
+
+  dashboard(){
+    this.router.navigate(['dashboard']);
   }
 
   logout(){
@@ -35,8 +44,6 @@ export class DataComponent implements OnInit {
 
   async getTemps() {
     await this.api.getTemperature().subscribe(data => {
-      console.log(data);
-      this.data_temp = data;
     });
   }
 

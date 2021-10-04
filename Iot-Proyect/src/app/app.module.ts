@@ -15,6 +15,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { CodeComponent } from './vistas/code/code.component';
 import { DataComponent } from './vistas/data/data.component';
 import { GraficasComponent } from './vistas/graficas/graficas.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { GraficasComponent } from './vistas/graficas/graficas.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
+    NgxChartsModule,
     GoogleChartsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added

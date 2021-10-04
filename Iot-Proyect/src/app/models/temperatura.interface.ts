@@ -1,5 +1,5 @@
 export interface TempI{
-    id_t:number;
-    humd:string;
-    temp:string;
+    id_t:any;
+    humd:any;
+    temp:any;
 }

@@ -54,7 +54,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     if(localStorage.getItem('token')){
       this.getState();
-      this.getTemps();
       this.getValor();
       this.getIluminacion();
     }
@@ -71,6 +70,10 @@ export class DashboardComponent implements OnInit {
   logout(){
     localStorage.removeItem('token');
     this.router.navigate(['login']);
+  }
+
+  dashboard(){
+    this.router.navigate(['dashboard']);
   }
 
   getState() {
@@ -212,12 +215,7 @@ export class DashboardComponent implements OnInit {
     console.log("Arreglo de arreglos: ", arregloDeArreglos);
   }*/
 
-  getTemps() {
-    this.api.getTemperature().subscribe(data => {
-      console.log(data);
-      this.data_temp = data;
-    });
-  }
+
 
   getValor() {
     let id = 1;
