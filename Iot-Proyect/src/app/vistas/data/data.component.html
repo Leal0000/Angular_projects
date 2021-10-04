@@ -43,14 +43,14 @@
                                 Cuarto
                             </a>
                             <div class="sb-sidenav-menu-heading">Data</div>
-                            <a class="nav-link collapsed" href="#"  data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Jardin
+                                Temperatura
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" (click)="data()" style="cursor: pointer;">Temperatura</a>
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div>
@@ -110,56 +110,33 @@
                             <li class="breadcrumb-item active">Ths sistem is develpoment for the bussines</li>
                         </ol>
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Apagador</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                      <span><p>Cuarto</p>
-                                      <!-- Rounded switch -->
-                                      
-                                           <label class="switch">
-                                            <input type="checkbox" [(ngModel)]="state" (click)="updateState($event)">                                       
-                                        <span class="slider round"></span>
-                                      </label>
 
-                                            
-                                      </span>
-                                    
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            <div class="card text-white bg-danger mb-3" style="max-width: 15rem; margin-left: 10px;">
+                                <div class="card-header">Temperatura</div>
+                                <div class="card-body">
+                                  <p class="card-text" style="font-size: 50px;">{{data_temp_real}}º</p>
                                     </div>
+                              </div>
+                              <div class="card text-white bg-primary mb-3" style="max-width: 15rem; margin-left: 10px;">
+                                <div class="card-header">Humedad</div>
+                                <div class="card-body">
+                                  <p class="card-text"style="font-size: 50px;">{{data_humd_real}}%</p>
                                 </div>
-                            </div>
-                            <div>
-                                <p>aqui </p>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Cortina</div>
+                              </div>
+                              
+
+                           
+                            <div class="col-xl-3 col-md-12">
+                                
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Temperatura</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <span><p>Cuarto</p>
-                                      <input type="range" value="{{valor}}" (click)="updateValor($event)">
-                                        </span>
+                                    <app-graficas></app-graficas>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4" style="background: #59C173;  /* fallback for old browsers */
-                                background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
-                                background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                                ">
-                                    <div class="card-body">Iluminacion RGB</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        
-                                        <div class="container" style="padding: 10px;">
-                                            <button class="btn btn-primary" (click)="updateIluminacion()">Aplicar Color</button> <br>
-                                            <input type="color" name="" id="" value="{{hexa}}" [(ngModel)]="hexa" name="hexa" style="margin: 20px; height: 100px; width: 100px; border-radius: 50%; padding: 0; overflow: hidden;">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                        
                            
                         </div>
 

@@ -12,6 +12,10 @@ import { AddComponent } from './vistas/add/add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { CodeComponent } from './vistas/code/code.component';
+import { DataComponent } from './vistas/data/data.component';
+import { GraficasComponent } from './vistas/graficas/graficas.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -21,7 +25,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     FooterComponent,
     HeaderComponent,
     DashboardComponent, 
-    routingComponents, AddComponent
+    routingComponents, AddComponent, CodeComponent, DataComponent, GraficasComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
+    NgxChartsModule,
     GoogleChartsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
